@@ -11,3 +11,15 @@ function starVowels(word) {
         } else starWord += char;
     } return starWord;
 }
+
+function censorSentence(sentence, array) {
+    let newSentence = [];
+    sentence.split(' ');
+
+    for (i = 0; i < sentence.length; i++) {
+        let word = sentence[i];
+        if(array.includes(word)) {
+            newSentence.push(starVowels(word));
+        } else newSentence.push(word);
+    } return newSentence;
+}
